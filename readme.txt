@@ -9,3 +9,9 @@ jar 位置: ./build/intermediates/bundles/default/classes.jar
 aar 位置: ./build/outputs/aar/*.aar
 
 提供给外部用
+
+
+
+build variants(变种,多样式的),
+签名配置(debug与release的签名都可以一致)
+BuildConfig中debug的值,可以使用这个值来做开关,比如log
