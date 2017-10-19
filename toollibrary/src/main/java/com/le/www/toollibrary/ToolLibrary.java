@@ -7,6 +7,13 @@ import android.util.Log;
  */
 
 public class ToolLibrary {
+//    public static void main(String[] args){
+//        System.out.print("hh");
+//    }
+
+    public static void main(String[] args){
+        Log.i("ToolLibrary", "testxxxxx");
+    }
     public static void test() {
         Log.i("ToolLibrary", "test");
     }
