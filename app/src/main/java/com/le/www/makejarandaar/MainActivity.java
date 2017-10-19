@@ -16,8 +16,10 @@ public class MainActivity extends AppCompatActivity {
         ToolLibrary.test();
         // 使用module中资源
         String s = getString(R.string.test);
+        String flavor = BuildConfig.FLAVOR;
 
-
-        Log.i("ToolLibrary", "BuildConfig.DEBUG:" + BuildConfig.DEBUG);
+        Log.i("ToolLibrary", "BuildConfig.DEBUG:" + BuildConfig.DEBUG+
+                ", testss:"+s+", flavor:"+flavor+
+        ", channel:"+BuildConfig.CHANNEL);
     }
 }

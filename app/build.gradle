@@ -31,6 +31,19 @@ android {
             debuggable false
         }
     }
+    // 多渠道配置，最终在BuildConfig.java 中生成一个常量供程序使用
+    productFlavors {
+        googleplay {
+            ext.channel = "googleplay"
+        }
+
+        xiaomiMarket {
+            ext.channel = "xiaomiMarket"
+        }
+    }
+    productFlavors.all { flavor ->
+        flavor.buildConfigField("String", "CHANNEL", "\"${flavor.ext.channel}\"")
+    }
 }
 
 dependencies {
