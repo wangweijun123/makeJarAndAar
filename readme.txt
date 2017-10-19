@@ -24,3 +24,7 @@ buildType  (debug, release)
 
 
 右上角的gradle图标打包时很有用
+
+
+什么时候生成jar包或者生成aar文件，如果与功能清单文件或者资源文件无关，
+就生成jar，否则生成aar文件
