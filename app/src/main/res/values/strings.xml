@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MakeJarAndAar</string>
+    <string name="test">test app</string>
 </resources>
