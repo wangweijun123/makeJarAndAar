@@ -30,6 +30,21 @@ android {
             signingConfig signingConfigs.config
             debuggable false
         }
+
+        applicationVariants.all { variant ->
+            variant.outputs.each { output ->
+                if ("release".equals(buildType.name)) {
+                    def outputFile = output.outputFile
+                    def filename = "MiFinance_v" + versionName + "(" + versionCode  + ")" + "_" + releaseTime() + "_" + variant.productFlavors.ext.channel[0] + "_release.apk"
+                    output.outputFile = new File(outputFile.parent, filename);
+                } else {
+                    def outputFile = output.outputFile
+                    def filename = "MiFinance_v" + versionName + "(" + versionCode  + ")" + "_" + releaseTime() + "_" + variant.productFlavors.ext.channel[0] + "_debug.apk"
+                    output.outputFile = new File(outputFile.parent, filename);
+                }
+
+            }
+        }
     }
     // 多渠道配置，最终在BuildConfig.java 中生成一个常量供程序使用
     productFlavors {
@@ -44,6 +59,10 @@ android {
     productFlavors.all { flavor ->
         flavor.buildConfigField("String", "CHANNEL", "\"${flavor.ext.channel}\"")
     }
+}
+
+def releaseTime() {
+    return new Date().format("yyyyMMdd")
 }
 
 dependencies {
