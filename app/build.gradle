@@ -56,6 +56,7 @@ android {
             ext.channel = "xiaomiMarket"
         }
     }
+    // 其实就是给BiuldConfig.java 添加添加一个常量 CHANNEL 值
     productFlavors.all { flavor ->
         flavor.buildConfigField("String", "CHANNEL", "\"${flavor.ext.channel}\"")
     }
