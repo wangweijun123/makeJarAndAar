@@ -18,16 +18,16 @@ import android.webkit.WebView;
 import android.widget.TextView;
 
 import com.le.www.toollibrary.ToolLibrary;
+import com.udacity.gradle.jokes.Joker;
 
 import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
-
+    TextView tv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
 
         // 使用module中的类
@@ -49,9 +49,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), HtmlActivity.class));
             }
         });
-
+        new Joker().getJoke();
     }
 
-    TextView tv;
+
 
 }

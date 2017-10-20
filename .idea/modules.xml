@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MakeJarAndAar.iml" filepath="$PROJECT_DIR$/MakeJarAndAar.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaJokes/javaJokes.iml" filepath="$PROJECT_DIR$/javaJokes/javaJokes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/makeJarAndAar.iml" filepath="$PROJECT_DIR$/makeJarAndAar.iml" />
       <module fileurl="file://$PROJECT_DIR$/toollibrary/toollibrary.iml" filepath="$PROJECT_DIR$/toollibrary/toollibrary.iml" />
     </modules>
   </component>

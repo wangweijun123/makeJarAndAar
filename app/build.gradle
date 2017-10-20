@@ -5,7 +5,7 @@ android {
         config {
             keyAlias 'key0'
             keyPassword '123456'
-            storeFile file('E:/study_copy/github/MakeJarAndAar/keystore.jks')
+            storeFile file('D:/work/github/makeJarAndAar/keystore.jks')
             storePassword '123456'
         }
     }
@@ -75,4 +75,5 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
     compile project(':toollibrary')
+    compile project(':javaJokes')
 }
