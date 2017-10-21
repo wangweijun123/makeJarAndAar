@@ -68,13 +68,16 @@ def releaseTime() {
 }
 
 dependencies {
+    // 本地libs底下的所有jar包,所以不用一个个去配置
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    // 远程依赖
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+    // 本地module
     compile project(':toollibrary')
-    compile project(':javaJokes')
+    //compile project(':javaJokes')
 }

@@ -17,6 +17,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.TextView;
 
+import com.example.MyClass;
 import com.le.www.toollibrary.ToolLibrary;
 import com.udacity.gradle.jokes.Joker;
 
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         new Joker().getJoke();
+        new MyClass();
     }
 
 
