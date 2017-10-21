@@ -1,8 +1,11 @@
 package com.example;
 
+import com.udacity.gradle.jokes.Joker;
+
 public class MyClass {
 
     public String testJavaLib() {
-        return "test java lib";
+        new Joker();
+        return "test java libsss";
     }
 }

@@ -13,7 +13,7 @@ android {
     buildToolsVersion "25.0.3"
     defaultConfig {
         applicationId "com.le.www.makejarandaar"
-        minSdkVersion 15
+        minSdkVersion 18
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -61,6 +61,14 @@ android {
     productFlavors.all { flavor ->
         flavor.buildConfigField("String", "CHANNEL", "\"${flavor.ext.channel}\"")
     }
+
+    dexOptions {
+       preDexLibraries true
+        maxProcessCount 8
+        // Instead of setting the heap size for the DEX process, increase Gradle's
+        // heap size to enable dex-in-process. To learm more, read the next section.
+        // javaMaxHeapSize "2048m"
+        }
 }
 
 def releaseTime() {

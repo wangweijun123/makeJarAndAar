@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
         });
         new Joker().getJoke();
         new MyClass();
+        com.le.www.makejarandaar.BuildConfig bb;
+        com.le.www.toollibrary.BuildConfig b;
     }
 
 
