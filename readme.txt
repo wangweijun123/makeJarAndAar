@@ -39,5 +39,18 @@ module 好处
 2，build的时候会增量编译
 
 
+合并规则
+
+code与资源
+
+资源比如 apk 中的androidManifest.xml只有一个，但是module都有，必须合并
+合并规则: 文件的优先级,也就是module具有优先级
+
+
+module 之间不能相互依赖，build有问题
+
+
+
+
 
 

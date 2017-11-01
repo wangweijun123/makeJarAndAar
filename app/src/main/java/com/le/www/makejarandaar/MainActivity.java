@@ -1,27 +1,15 @@
 package com.le.www.makejarandaar;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Html;
-import android.text.Spanned;
-import android.text.method.LinkMovementMethod;
-import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
-import android.webkit.JavascriptInterface;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
 import android.widget.TextView;
 
 import com.example.MyClass;
 import com.le.www.toollibrary.ToolLibrary;
 import com.udacity.gradle.jokes.Joker;
-
-import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
     TextView tv;
