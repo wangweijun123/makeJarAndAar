@@ -1,5 +1,7 @@
 package com.le.www.makejarandaar;
 
+import android.app.Application;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +10,6 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.MyClass;
-import com.le.www.toollibrary.ToolLibrary;
 import com.udacity.gradle.jokes.Joker;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         // 使用module中的类
-        ToolLibrary.test();
+//        ToolLibrary.test();
         // 使用module中资源
         String s = getString(R.string.test);
         String flavor = BuildConfig.FLAVOR;
@@ -41,7 +42,12 @@ public class MainActivity extends AppCompatActivity {
         new Joker().getJoke();
         new MyClass();
         com.le.www.makejarandaar.BuildConfig bb;
-        com.le.www.toollibrary.BuildConfig b;
+
+        Application application = getApplication();
+       Context context = getApplicationContext();
+        Log.i("ToolLibrary", "application:"+application+", context:"+context
+        +", " + (application == context));
+
     }
 
 
